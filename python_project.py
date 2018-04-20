@@ -302,7 +302,7 @@ def nextTuple(idx) :
     except FileNotFoundError :
         print('database does not exist')
 
-def prevTuple() :
+def prevTuple(idx) :
     try :
         l = readFile()
         l.sort()
@@ -312,6 +312,8 @@ def prevTuple() :
         elif index == None :
             print('select a row first')
         else :
+            if idx != None :
+                index = idx-1
             index -= 1
             print(l[index])
             return(l[index])
