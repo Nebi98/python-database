@@ -358,11 +358,12 @@ def nextEntry() :
 
 
 def prevEntry() :
-    l = prevTuple()
+    global inx
+    l = prevTuple(inx)
     if l == None :
         messagebox.showerror(title = ' ',message = 'Database Finished')
     else :
-        global bl,inx,ep,lp,lf,ef,ll,el,lpno,epno,la,ea,lc,ec
+        global bl,ep,lp,lf,ef,ll,el,lpno,epno,la,ea,lc,ec
         bl.destroy()
         ep.destroy()
         lp.destroy()
