@@ -39,6 +39,7 @@ def login() :
         psd = fw.read()
     s = e.get()
 
+    #initial password is 1234
     
     if s == psd :
         print('yes')
